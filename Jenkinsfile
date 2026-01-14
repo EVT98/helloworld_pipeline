@@ -5,21 +5,30 @@ pipeline {
   stages {
 
     stage('Build') {
-      echo 'Build step'
-      sleep 10
+      steps {
+        echo 'Build step'
+        sleep 10
+      }
+
     }
 
     stage('Test') {
-      echo 'Test stage'
+      steps {
+        echo 'Test step'
+      }
     }
 
     stage('Deply') {
-      echo 'Deploy stage'
-      sleep 10
+      steps {
+        echo 'Deply step'
+        sleep 10
+      }
     }
 
     stage('Docker'){
-      echo 'Image step'
+      steps {
+        echo 'Image step'
+      }
     }
     
   }
